@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.w-100 {
+  height: 500px;
+}
+.mb-3{
+  width: 800px;
+}
+.Navbar.custom{
+  width: 10px;
+  margin: 0 auto;
+}
