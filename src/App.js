@@ -27,7 +27,7 @@ function App() {
       <div className='forms'>
         <Bootstrapforms /> 
       </div>
-      <Bootstrapbutton />
+      <Bootstrapbutton  type = "submit"/>
       <br></br>
       <Bootstraprodape />  
 
