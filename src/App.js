@@ -15,7 +15,7 @@ function App() {
       <Bootstrapcarousel />
       <br></br>
       
-      <view style={{
+      <div style={{
         display:'flex',
         flexDirection: 'row'
       }}>
@@ -23,8 +23,10 @@ function App() {
         <Bootstrapcards />
         <Bootstrapcards />
         <Bootstrapcards />       
-      </view>  
-      <Bootstrapforms /> 
+      </div>  
+      <div className='forms'>
+        <Bootstrapforms /> 
+      </div>
       <Bootstrapbutton />
       <br></br>
       <Bootstraprodape />  

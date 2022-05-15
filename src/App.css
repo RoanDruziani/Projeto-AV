@@ -42,6 +42,10 @@
 .mb-3{
   width: 800px;
 }
+.forms{
+  display: flex;
+  justify-content: center;
+}
 .Navbar.custom{
   width: 10px;
   margin: 0 auto;
