@@ -4,7 +4,7 @@ import {Card} from "react-bootstrap"
 export default function Bootstrapcards() {
   return (
     <div className='c6'>
-      <Card style={{ width: '15rem'}}>
+      <Card style={{ width: '20rem'}}>
   <Card.Img variant="top" src="https://images.lojanike.com.br/1024x1024/produto/camisa-nike-sc-corinthians-202122-torcedor-pro-ii-infantil-CV8239-010-1-11622225694.jpg" />
   <Card.Body>
     <Card.Title>Card Title</Card.Title>

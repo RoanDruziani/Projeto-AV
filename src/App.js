@@ -7,6 +7,7 @@ import Bootstrapcards from './components/Bootstrapcards';
 import Bootstrapforms from './components/Bootstrapforms';
 import Bootstrapbutton from './components/Bootstrapbutton';
 import Bootstraprodape from './components/Bootstraprodape';
+import Bootstraploja from './components/Bootstraploja';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Bootstrapnavbar />
       <Bootstrapcarousel />
       <br></br>
-      
+      <Bootstraploja />
       <div style={{
         display:'flex',
         flexDirection: 'row'

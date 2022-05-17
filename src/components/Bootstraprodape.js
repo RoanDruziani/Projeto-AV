@@ -11,13 +11,9 @@ export default function Bootstraprodape() {
           <Navbar bg="dark" variant="dark">
     <Container>
       <Navbar.Brand href="#home">
-        <img
-          alt=""
-          src="https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
-          width="300"
-          height="300"
-          className="d-inline-block align-top"
-        />{' '}
+        j,hvhgcmhgc,jhv
+        <br></br>
+        wekuw,gcweugck
         
       
       </Navbar.Brand>
