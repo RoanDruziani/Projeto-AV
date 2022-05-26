@@ -15,5 +15,6 @@ export default function Bootstrapcards() {
   </Card.Body>
 </Card>
     </div>
+    
   )
 }

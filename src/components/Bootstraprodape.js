@@ -6,9 +6,9 @@ import {Nav} from "react-bootstrap"
 
 export default function Bootstraprodape() {
   return (
-    <div>
+    <div style={{display:"flex", justifyContent:'center' }}>
           <>
-          <Navbar bg="dark" variant="dark">
+          <Navbar bg="dark" variant="dark" >
     <Container>
       <Navbar.Brand href="#home">
         j,hvhgcmhgc,jhv

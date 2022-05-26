@@ -60,5 +60,24 @@
   justify-content: center;
 }
 .c6{
-  padding-left: 10px ;
+  padding-left: 16px ;
+}
+.loja{
+  font-size: 60px;
+  color: black;
+}
+.slide1{
+  font-size: 40px;
+  text-shadow: 4px 4px 4px #000;
+}
+.slide2{
+  font-size: 40px;
+  text-shadow: 4px 4px 4px #000;
+}
+.slide3{
+  font-size: 40px;
+  text-shadow: 4px 4px 4px #000;
+}
+.main-title{
+  font-size: 50px;
 }

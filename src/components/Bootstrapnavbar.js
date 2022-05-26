@@ -9,12 +9,9 @@ export default function Bootstrapnavbar() {
       <>
   <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home">Teste</Navbar.Brand>
+    <Navbar.Brand href="#home">Sport club Corinthians Paulista</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href="#home">Teste</Nav.Link>
-      <Nav.Link href="#features">Teste</Nav.Link>
-      <Nav.Link href="#pricing">Teste</Nav.Link>
-      <Nav.Link href="#pricing">Teste</Nav.Link>
+     
     </Nav>
     </Container>
   </Navbar> 
