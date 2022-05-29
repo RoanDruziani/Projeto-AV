@@ -60,9 +60,15 @@
   justify-content: center;
 }
 .c6{
+<<<<<<< Updated upstream
   padding-left: 16px ;
   display: flex;
   flex-direction: row ;
+=======
+  padding-left: 40px ;
+  display: flex;
+  flex-direction: row;
+>>>>>>> Stashed changes
 }
 .loja{
   font-size: 60px;
@@ -82,4 +88,7 @@
 }
 .main-title{
   font-size: 50px;
+}
+.Card.Img{
+  height: 400px;
 }
