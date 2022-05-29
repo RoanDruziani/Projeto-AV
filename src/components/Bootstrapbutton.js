@@ -4,7 +4,10 @@ import {Button} from "react-bootstrap"
 export default function Bootstrapbutton(props) {
   return (
     <div>
-      <Button type={props.type}>Enviar</Button>
+      <Button 
+      type={props.type} onClick={props.onClick}>
+        Enviar
+      </Button>
     </div>
   )
 }

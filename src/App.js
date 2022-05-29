@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -37,7 +38,7 @@ function App() {
       <div className='forms'>       
         <Bootstrapforms /> 
       </div>
-      <Bootstrapbutton  type = "submit"/>
+  
       <br></br>
       <Bootstraprodape />  
 
