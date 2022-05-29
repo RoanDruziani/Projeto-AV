@@ -60,7 +60,9 @@
   justify-content: center;
 }
 .c6{
-  padding-left: 16px ;
+  padding-left: 40px ;
+  display: flex;
+  flex-direction: row;
 }
 .loja{
   font-size: 60px;
