@@ -44,27 +44,18 @@ export default function () {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
-<<<<<<< Updated upstream
             <Form.Control type="email" placeholder="Enter email"  />
-=======
-            <Form.Control type="email" placeholder="Email" />
->>>>>>> Stashed changes
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>Senha</Form.Label>
-            <Form.Control type="password" placeholder="Senha" />
+            <Form.Control type="password" placeholder="Password" />
           </Form.Group>
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridAddress1">
-<<<<<<< Updated upstream
           <Form.Label>Rua</Form.Label>
           <Form.Control placeholder="1234 Main St" onChange={(e) => setRua(e.target.value)} />
-=======
-          <Form.Label>Endereço</Form.Label>
-          <Form.Control placeholder="Endereço" />
->>>>>>> Stashed changes
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formGridAddress2">

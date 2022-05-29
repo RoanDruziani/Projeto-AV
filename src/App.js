@@ -22,15 +22,10 @@ function App() {
       <Bootstraploja />
       <br></br>
       <h1 class='main-title'> Ultimas Contratações</h1>
-<<<<<<< Updated upstream
       <br></br>
              
         <Bootstrapcards />
                
-=======
-      <br></br>     
-        <Bootstrapcards />              
->>>>>>> Stashed changes
       <br></br>
       <h1 class='main-title'> Cadastro Sócio Torcedor</h1>  
       <br></br>
