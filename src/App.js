@@ -23,9 +23,15 @@ function App() {
       <br></br>
       <h1 class='main-title'> Ultimas Contratações</h1>
       <br></br>
-             
+      <div style={{
+        display:'flex',
+        flexDirection: 'row'
+      }}>               
         <Bootstrapcards />
-               
+        <Bootstrapcards />
+        <Bootstrapcards />
+        <Bootstrapcards />       
+      </div>
       <br></br>
       <h1 class='main-title'> Cadastro Sócio Torcedor</h1>  
       <br></br>
