@@ -83,3 +83,13 @@
 .main-title{
   font-size: 50px;
 }
+.rodape {
+  background-color:black;
+  color: blanchedalmond;
+}
+.text-muted {
+  color:#fff!important;
+}
+.text-muted:hover {
+  color:yellow!important;
+}

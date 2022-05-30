@@ -7,7 +7,6 @@ import Bootstrapnavbar from './components/Bootstrapnavbar';
 import Bootstrapcards from './components/Bootstrapcards';
 import Bootstrapforms from './components/Bootstrapforms';
 import Bootstrapbutton from './components/Bootstrapbutton';
-import Bootstraprodape from './components/Bootstraprodape';
 import Bootstraploja from './components/Bootstraploja';
 
 
@@ -32,7 +31,7 @@ function App() {
       </div>
   
       <br></br>
-      <Bootstraprodape />  
+       
 
     </div>
   );
