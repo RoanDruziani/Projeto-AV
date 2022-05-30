@@ -81,7 +81,7 @@ export default function () {
         </Row>
 
         <Form.Group className="mb-3" id="formGridCheckbox">
-          <Form.Check className='mb-35' type="checkbox" label="lembre-se de min" />
+          <Form.Check className='mb-35' type="checkbox" label="Check" />
         </Form.Group>
       </Form>
       <Bootstrapbutton  type = "submit"/>
