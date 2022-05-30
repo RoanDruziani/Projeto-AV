@@ -17,7 +17,7 @@ function App() {
       <Bootstrapnavbar />
       <Bootstrapcarousel />
       <br></br>
-      <h1 class='main-title'> Lojaa </h1>
+      <h1 class='main-title'> Loja </h1>
       <br></br>
       <Bootstraploja />
       <br></br>
