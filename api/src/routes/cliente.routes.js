@@ -2,8 +2,7 @@
 /**
  * Arquivo: routes/funcionarioRoute.js
  * Descrição: arquivo responsável pelas rotas da api relacionado ao Funcionário.
- * Data: 23/06/2019
- * Author: Glaucia Lemos
+
  */
 
 // ==> Aqui que vai conter as rotas do HTTP da api - funcionário

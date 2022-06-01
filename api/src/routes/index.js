@@ -1,8 +1,7 @@
 /**
  * Arquivo: src/routes/index.js
  * Descrição: arquivo responsável pela chamada da Api 'Funcionário' da aplicação.
- * Data: 09/06/2019
- * Author: Glaucia Lemos
+
  */
 
 const express = require('express');

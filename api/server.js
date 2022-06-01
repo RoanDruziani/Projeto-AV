@@ -1,8 +1,7 @@
 /**
  * Arquivo: server.js
  * Descrição: arquivo responsável por toda a configuração da aplicação (Back-End)
- * Data: 09/06/2019
- * Author: Glaucia Lemos
+
  */
 
 // ==> Exemplo usando o SOLID

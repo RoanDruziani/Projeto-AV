@@ -1,8 +1,7 @@
 /**
  * Arquivo: src/controllers/funcionario.controller.js
  * Descrição: arquivo responsável pelo CRUD da classe 'Funcionário'
- * Data: 27/06/2019
- * Author: Glaucia Lemos
+
  */
 
 const Cliente = require('../models/cliente.model');
