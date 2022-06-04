@@ -3,6 +3,42 @@ import { Form } from "react-bootstrap"
 import { Row } from "react-bootstrap"
 import { Col } from "react-bootstrap"
 import Bootstrapbutton from './Bootstrapbutton'
+import AtividadeLista from './AtividadesLista'
+
+
+let initialState = [
+  {
+    id: 1,
+    name: 'titulo',
+    email: 'Primeira Atividade',
+  },
+  {
+    id: 2,
+    name: 'titulo',
+    email: 'teste',
+  },
+];
+
+
+// const atualizarListaPessoas = async() =>{
+
+//   try {
+
+//     const url = 'http://localhost:3000/person';
+//     const dados = await fetch(url);
+//     const resposta = await dados.json();
+//     console.log(initialState)
+//     initialState = resposta
+//     console.log(initialState)
+//     return(resposta)
+
+//   } catch (error) {
+
+//     alert("Ocorreu um erro inesperado, tente novamente");
+
+//   }
+
+// }
 
 const enviar = async () => {
 
@@ -44,7 +80,9 @@ const enviar = async () => {
     const url = 'http://localhost:3000/person';
     const dados = await fetch(url);
     const resposta = await dados.json();
-    console.log(resposta)
+    console.log(initialState)
+    initialState = resposta
+    console.log(initialState)
 
   } catch (error) {
 
@@ -71,7 +109,51 @@ export default function () {
     document.getElementById('formGridAddress1').value = endereco.logradouro
   }
 
+  const [atividades, setAtividades] = useState(initialState);
+    const [atividade, setAtividade] = useState({});
+  
+    function addAtividade(e) {
+      e.preventDefault();
+  
+      const atividade = {
+        id: document.getElementById('formGridCity').value,
+        name: document.getElementById('formGridAddress2').value,
+        email: document.getElementById('formGridEmail').value,
+  
+      };
+  
+  
+      setAtividades([...atividades, { ...atividade }]);
+    }
 
+    const atualizarListaPessoas = async() =>{
+
+      try {
+    
+        const url = 'http://localhost:3000/person';
+        const dados = await fetch(url);
+        const resposta = await dados.json();
+        console.log(initialState)
+        atividades.values = resposta
+        console.log(atividades)
+        return(resposta)
+    
+      } catch (error) {
+    
+        alert("Ocorreu um erro inesperado, tente novamente");
+    
+      }
+    
+    }
+  
+    function deletarAtividade (id){
+      const atividadesFiltradas = atividades.filter(atividade => atividade.id !== id);
+      setAtividades([...atividadesFiltradas]);
+    } 
+    function pegarAtividade(id) {
+      const atividade = atividades.filter((atividade) => atividade.id === id);
+      setAtividade(atividade[0])
+    }
 
   const pesquisarCep = async () => {
     try {
@@ -136,7 +218,16 @@ export default function () {
           <Form.Check className='mb-35' type="checkbox" label="Check" />
         </Form.Group>
       </Form>
-      <Bootstrapbutton type="submit" onClick={enviar} />
+      <Bootstrapbutton text="enviar" type="submit" onClick={enviar} />
+      <Bootstrapbutton text="ATT" type="submit" onClick={atualizarListaPessoas} />
+      <Bootstrapbutton text="ADD" type="submit" onClick={addAtividade} />
+      <div>
+        <AtividadeLista
+          atividades={atividades}
+          deletarAtividade={deletarAtividade}
+          pegarAtividade={pegarAtividade}
+        />
+      </div>
     </div>
   )
 }

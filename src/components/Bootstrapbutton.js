@@ -5,8 +5,8 @@ export default function Bootstrapbutton(props) {
   return (
     <div>
       <Button 
-      type={props.type} onClick={props.onClick}>
-        Enviar
+      type={props.type} onClick={props.onClick} text={props.text}>
+        {props.text}
       </Button>
     </div>
   )
