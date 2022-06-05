@@ -1,10 +1,32 @@
-# Getting Started with Create React App
+<h1>AV2 - Desenvolvimento de Sistema Web Backend</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Desenvolvemos sistema Web Backend:
+  + API CRUD (Create, Retrieve, Udpate Delete) usamos metodos HTTP e respostas HTTP da forma correta.
+  + Salvamos as informações em banco de dados simples.
+  + Realizamos a integração com Frontend WEB desenvolvido na AV1.
+  + Gravamos novas informações (Create - POST).
+  + Exibimos os dados numa Grid (Retrieve - GET).
+  + Conseguimos alterar dados já inseridos (Update - PATCH/PUT).
+  + Excluir dados (Delete - DELETE).
+  + Código Backend e Frontend em repositórios Git separados.
+  + Publicamos o Frontend e Backend em servidores para acesso público ou trazer computador com o sistema funcionando.
+  
+## Tecnologias usadas
 
-## Available Scripts
-
-In the project directory, you can run:
+<table>
+  <tr>
+    <td>React</td>
+    <td>Bootstrap</td>
+    <td>CSS</td>
+    <td>Java</td>
+  </tr>
+  <tr>
+    <td>v17.0.2</td>
+    <td>v5.2</td>
+    <td>0</td>
+    <td>0</td>
+   </tr> 
+<table/>
 
 ### `npm start`
 
