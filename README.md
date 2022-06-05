@@ -18,6 +18,11 @@
 
 > Informações do Web site
 
++ Cadastro de Socios torcedores 
++ Modo de edição do cadastro
++ IPA
++ Frontend
++ Backend
 
 
 
