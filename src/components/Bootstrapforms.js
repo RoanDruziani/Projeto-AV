@@ -110,50 +110,50 @@ export default function () {
   }
 
   const [atividades, setAtividades] = useState(initialState);
-    const [atividade, setAtividade] = useState({});
-  
-    function addAtividade(e) {
-      e.preventDefault();
-  
-      const atividade = {
-        id: document.getElementById('formGridCity').value,
-        name: document.getElementById('formGridAddress2').value,
-        email: document.getElementById('formGridEmail').value,
-  
-      };
-  
-  
-      setAtividades([...atividades, { ...atividade }]);
+  const [atividade, setAtividade] = useState({});
+
+  function addAtividade(e) {
+    e.preventDefault();
+
+    const atividade = {
+      id: document.getElementById('formGridCity').value,
+      name: document.getElementById('formGridAddress2').value,
+      email: document.getElementById('formGridEmail').value,
+      endereco: document.getElementById('formGridAddress1').value,
+    };
+
+
+    setAtividades([...atividades, { ...atividade }]);
+  }
+
+  const atualizarListaPessoas = async () => {
+
+    try {
+
+      const url = 'http://localhost:3000/person';
+      const dados = await fetch(url);
+      const resposta = await dados.json();
+      console.log(initialState)
+      atividades.values = resposta
+      console.log(atividades)
+      return (resposta)
+
+    } catch (error) {
+
+      alert("Ocorreu um erro inesperado, tente novamente");
+
     }
 
-    const atualizarListaPessoas = async() =>{
+  }
 
-      try {
-    
-        const url = 'http://localhost:3000/person';
-        const dados = await fetch(url);
-        const resposta = await dados.json();
-        console.log(initialState)
-        atividades.values = resposta
-        console.log(atividades)
-        return(resposta)
-    
-      } catch (error) {
-    
-        alert("Ocorreu um erro inesperado, tente novamente");
-    
-      }
-    
-    }
-  
-    function deletarAtividade (id){
-      const atividadesFiltradas = atividades.filter(atividade => atividade.id !== id);
-      setAtividades([...atividadesFiltradas]);
-    } 
-    function pegarAtividade(id) {
-      const atividade = atividades.filter((atividade) => atividade.id === id);
-      setAtividade(atividade[0])
-    }
+  function deletarAtividade(id) {
+    const atividadesFiltradas = atividades.filter(atividade => atividade.id !== id);
+    setAtividades([...atividadesFiltradas]);
+  }
+  function pegarAtividade(id) {
+    const atividade = atividades.filter((atividade) => atividade.id === id);
+    setAtividade(atividade[0])
+  }
 
   const pesquisarCep = async () => {
     try {
@@ -174,11 +174,11 @@ export default function () {
 
   return (
     <div>
-      <Form.Group className="mb-3" controlId="formGridAddress2">
+      <Form>
+        <Form.Group className="mb-3" controlId="formGridAddress2">
           <Form.Label>Nome</Form.Label>
           <Form.Control placeholder="Nome do usuário" />
         </Form.Group>
-      <Form>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
@@ -196,7 +196,7 @@ export default function () {
           <Form.Control placeholder="Endereço" onChange={(e) => setRua(e.target.value)} />
         </Form.Group>
 
-        
+
 
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridCity">
@@ -219,9 +219,11 @@ export default function () {
           <Form.Check className='mb-35' type="checkbox" label="Check" />
         </Form.Group>
       </Form>
-      <Bootstrapbutton text="enviar" type="submit" onClick={enviar} />
-      <Bootstrapbutton text="ATT" type="submit" onClick={atualizarListaPessoas} />
-      <Bootstrapbutton text="ADD" type="submit" onClick={addAtividade} />
+      <div className='botoesLista'>
+        <Bootstrapbutton text="enviar" type="submit" onClick={enviar} />
+        <Bootstrapbutton text="ATT" type="submit" onClick={atualizarListaPessoas} />
+        <Bootstrapbutton text="ADD" type="submit" onClick={addAtividade} />
+      </div>
       <div>
         <AtividadeLista
           atividades={atividades}
