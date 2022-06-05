@@ -18,7 +18,7 @@
 
 > Informações do Web site
 
-+ Cadastro de Socios torcedores 
++ Cadastro de Sócios torcedores 
 + Modo de edição do cadastro
 + IPA
 + Frontend
