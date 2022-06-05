@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap"
 import { Row } from "react-bootstrap"
 import { Col } from "react-bootstrap"
 import { BsFillCartFill } from "react-icons/bs";
-import {Carousel} from "react-bootstrap"
+
 
 
 export default function Bootstraploja() {

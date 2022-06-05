@@ -174,6 +174,10 @@ export default function () {
 
   return (
     <div>
+      <Form.Group className="mb-3" controlId="formGridAddress2">
+          <Form.Label>Nome</Form.Label>
+          <Form.Control placeholder="Nome do usuário" />
+        </Form.Group>
       <Form>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
@@ -192,10 +196,7 @@ export default function () {
           <Form.Control placeholder="Endereço" onChange={(e) => setRua(e.target.value)} />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formGridAddress2">
-          <Form.Label>Complemento</Form.Label>
-          <Form.Control placeholder="Casa, Apartamento..." />
-        </Form.Group>
+        
 
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridCity">
