@@ -68,16 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   <tr>
     <td>React</td>
     <td>Bootstrap</td>
-    <td>Node</td>
-    <td>CSS</td>
-    <td>Java</td>    
+    <td>Node</td>      
   </tr>
   <tr>
     <td>v17.0.2</td>
     <td>v5.2</td>
-    <td>v8</td>
-    <td>0</td>
-    <td>0</td>    
+    <td>v8</td>       
    </tr> 
 <table/>
 
