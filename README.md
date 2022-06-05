@@ -24,7 +24,20 @@
 + Frontend
 + Backend
 
+## Tecnologias usadas
 
+<table>
+  <tr>
+    <td>React</td>
+    <td>Bootstrap</td>
+    <td>Node</td>      
+  </tr>
+  <tr>
+    <td>v17.0.2</td>
+    <td>v5.2</td>
+    <td>v8</td>       
+   </tr> 
+<table/>
 
 ## Acesso a Pagina
 
@@ -65,24 +78,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
-
-## Tecnologias usadas
-
-<table>
-  <tr>
-    <td>React</td>
-    <td>Bootstrap</td>
-    <td>Node</td>      
-  </tr>
-  <tr>
-    <td>v17.0.2</td>
-    <td>v5.2</td>
-    <td>v8</td>       
-   </tr> 
-<table/>
-
-
 ## Saiba Mais
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -91,22 +86,22 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Divisão de códigos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ### Analisando o tamanho do pacote
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
 ### Fazendo um aplicativo web progressivo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
 ### Configuração avançada
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Implantação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 
