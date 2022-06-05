@@ -1,4 +1,4 @@
-<h1>AV2 - Desenvolvimento de Sistema Web Backend</h1>
+<h1>AV2 - Sistema Web Backend</h1>
 
 > Desenvolvemos sistema Web Backend:
   + API CRUD (Create, Retrieve, Udpate Delete) usamos metodos HTTP e respostas HTTP da forma correta.
