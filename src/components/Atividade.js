@@ -2,7 +2,7 @@ import React from 'react'
 
 
 export default function Atividade(props) {
-
+console.log(props);
     return (
         <div
             className={'card mb-2 shadow'}>
@@ -27,7 +27,7 @@ export default function Atividade(props) {
                     </button>
                     <button
                         className='btn btn-sm btn-outline-danger'
-                        onClick={() => props.deletarAtividade(props.ativ.id)}>
+                        onClick={() => props.deletarAtividade(props.ativ._id)}>
                         <i className='fas fa-trash me-2'></i>
                         Deletar
                     </button>

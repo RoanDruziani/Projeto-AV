@@ -1,100 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Form } from "react-bootstrap"
 import { Row } from "react-bootstrap"
 import { Col } from "react-bootstrap"
 import Bootstrapbutton from './Bootstrapbutton'
 import AtividadeLista from './AtividadesLista'
-
-
-let initialState = [
-  {
-    id: 1,
-    name: 'titulo',
-    email: 'Primeira Atividade',
-  },
-  {
-    id: 2,
-    name: 'titulo',
-    email: 'teste',
-  },
-];
-
-
-// const atualizarListaPessoas = async() =>{
-
-//   try {
-
-//     const url = 'http://localhost:3000/person';
-//     const dados = await fetch(url);
-//     const resposta = await dados.json();
-//     console.log(initialState)
-//     initialState = resposta
-//     console.log(initialState)
-//     return(resposta)
-
-//   } catch (error) {
-
-//     alert("Ocorreu um erro inesperado, tente novamente");
-
-//   }
-
-// }
-
-const enviar = async () => {
-
-  const cidade = document.getElementById('formGridCity').value
-  const estado = document.getElementById('formGridState').value
-  const rua = document.getElementById('formGridAddress1').value
-  const email = document.getElementById('formGridEmail').value
-  const password = document.getElementById('formGridPassword').value
-  const name = document.getElementById('formGridAddress2').value
-
-  const formularioJson = JSON.stringify({
-    cidade: cidade,
-    estado: estado,
-    rua: rua,
-    email: email,
-    password: password,
-    name: name
-  })
-
-  try {
-
-    const url = 'http://localhost:3000/person';
-    const dados = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: formularioJson
-    });
-    const resposta = await dados.json();
-    console.log(resposta)
-
-  } catch (error) {
-
-    alert("Ocorreu um erro inesperado, tente novamente");
-
-  }
-
-  try {
-
-    const url = 'http://localhost:3000/person';
-    const dados = await fetch(url);
-    const resposta = await dados.json();
-    console.log(initialState)
-    initialState = resposta
-    console.log(initialState)
-
-  } catch (error) {
-
-    alert("Ocorreu um erro inesperado, tente novamente");
-
-  }
-
-  console.log(formularioJson)
-
-}
-
-
 
 export default function () {
 
@@ -102,6 +11,8 @@ export default function () {
   const [rua, setRua] = useState()
   const [cidade, setCidade] = useState()
   const [estado, setEstado] = useState()
+  const [atividades, setAtividades] = useState([]);
+  const [atividade, setAtividade] = useState(null);
 
   const preencherFormulario = (endereco) => {
     document.getElementById('formGridCity').value = endereco.localidade
@@ -109,56 +20,111 @@ export default function () {
     document.getElementById('formGridAddress1').value = endereco.logradouro
   }
 
-  const [atividades, setAtividades] = useState(initialState);
-  const [atividade, setAtividade] = useState({});
-
-  function addAtividade(e) {
-    e.preventDefault();
-
-    const atividade = {
-      id: document.getElementById('formGridCity').value,
-      name: document.getElementById('formGridAddress2').value,
-      email: document.getElementById('formGridEmail').value,
-      endereco: document.getElementById('formGridAddress1').value,
-    };
-
-
-    setAtividades([...atividades, { ...atividade }]);
-  }
-
-  const atualizarListaPessoas = async () => {
-
+  async function getPersons() {
     try {
 
       const url = 'http://localhost:3000/person';
       const dados = await fetch(url);
       const resposta = await dados.json();
-      console.log(initialState)
-      atividades.values = resposta
-      console.log(atividades)
-      return (resposta)
+      setAtividades(resposta)
+
 
     } catch (error) {
 
       alert("Ocorreu um erro inesperado, tente novamente");
 
     }
+  }
+
+  useEffect(() => {
+    getPersons()
+  }, [])
+
+
+  const enviar = async () => {
+
+    const cidade = document.getElementById('formGridCity').value
+    const estado = document.getElementById('formGridState').value
+    const rua = document.getElementById('formGridAddress1').value
+    const email = document.getElementById('formGridEmail').value
+    const password = document.getElementById('formGridPassword').value
+    const name = document.getElementById('formGridAddress2').value
+
+    const formularioJson = JSON.stringify({
+      cidade: cidade,
+      estado: estado,
+      rua: rua,
+      email: email,
+      password: password,
+      name: name
+    })
+
+    if (atividade !== null) {
+
+      const url = 'http://localhost:3000/person/' + atividade._id;
+      await fetch(url, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: formularioJson
+      });
+      setAtividade(null)
+      getPersons()
+    } else {
+      try {
+
+        const url = 'http://localhost:3000/person';
+        const dados = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: formularioJson
+        });
+
+        getPersons()
+
+      } catch (error) {
+
+        alert("Ocorreu um erro inesperado, tente novamente");
+
+      }
+    }
+  }
+
+  const cancelar = () => {
+
+
 
   }
 
-  function deletarAtividade(id) {
-    const atividadesFiltradas = atividades.filter(atividade => atividade.id !== id);
-    setAtividades([...atividadesFiltradas]);
+
+  async function deletarAtividade(id) {
+    try {
+
+      const url = 'http://localhost:3000/person/' + id;
+      await fetch(url, {
+        method: "DELETE"
+      });
+
+
+      getPersons()
+
+    } catch (error) {
+
+      alert("Ocorreu um erro inesperado, tente novamente");
+
+    }
   }
+
   function pegarAtividade(id) {
     const atividade = atividades.filter((atividade) => atividade.id === id);
     setAtividade(atividade[0])
+
+    document.getElementById('formGridCity').value = atividade[0].cidade;
+    document.getElementById('formGridEmail').value = atividade[0].email;
+
   }
 
   const pesquisarCep = async () => {
     try {
-
-      console.log(cep);
       const url = `https://viacep.com.br/ws/${cep}/json/`;
       const dados = await fetch(url);
       const endereco = await dados.json();
@@ -177,7 +143,7 @@ export default function () {
       <Form>
         <Form.Group className="mb-3" controlId="formGridAddress2">
           <Form.Label>Nome</Form.Label>
-          <Form.Control placeholder="Nome do usuário" />
+          <Form.Control placeholder="Nome do usuário" disabled={atividade !== null} />
         </Form.Group>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
@@ -220,9 +186,8 @@ export default function () {
         </Form.Group>
       </Form>
       <div className='botoesLista'>
-        <Bootstrapbutton text="enviar" type="submit" onClick={enviar} />
-        <Bootstrapbutton text="ATT" type="submit" onClick={atualizarListaPessoas} />
-        <Bootstrapbutton text="ADD" type="submit" onClick={addAtividade} />
+        <Bootstrapbutton text={atividade !== null ? "Atualizar" : "Salvar"} type="submit" onClick={enviar} />
+        <Bootstrapbutton text="Cancelar" type="submit" onClick={cancelar} />
       </div>
       <div>
         <AtividadeLista
