@@ -120,6 +120,10 @@ export default function () {
 
     document.getElementById('formGridCity').value = atividade[0].cidade;
     document.getElementById('formGridEmail').value = atividade[0].email;
+    document.getElementById('formGridState').value = atividade[0].estado;
+    document.getElementById('formGridAddress1').value = atividade[0].rua;
+    document.getElementById('formGridPassword').value = atividade[0].password;
+    document.getElementById('formGridAddress2').value = atividade[0].name;
 
   }
 
