@@ -91,8 +91,13 @@ export default function () {
 
   const cancelar = () => {
 
-
-
+    document.getElementById('formGridCity').value = null
+    document.getElementById('formGridState').value = null
+    document.getElementById('formGridAddress1').value = null
+    document.getElementById('formGridEmail').value = null
+    document.getElementById('formGridPassword').value = null
+    document.getElementById('formGridAddress2').value = null
+    document.getElementById('formGridAddress2').disabled = false
   }
 
 
