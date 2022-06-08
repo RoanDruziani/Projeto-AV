@@ -94,7 +94,17 @@
 .text-muted:hover {
   color:yellow!important;
 }
-.jogadores{
+.jogador1{
+  object-fit: cover;
+}
+.jogador2{
+  object-fit: cover;
+
+}
+.jogador3{
+  object-fit: cover;
+}
+.jogador4{
   object-fit: cover;
 }
 .botoesLista{
@@ -132,8 +142,9 @@
 @media screen and (max-width: 550px){ 
 .c6{
   display: flex;
-  margin-right: 0px;
-  margin-left: 0px;
+  margin-right: 5px;
+  margin-left: -33px;
+  height: 400px;
 }
 .navbar-brand{
   font-size: 25px;
@@ -150,5 +161,17 @@
 }
 .carousel-contro-nect-icon{
   color: #000;
+}
+.card-img-top.jogador1{
+  height: 400px;
+}
+.card-img-top.jogador2{
+  height: 400px;
+}
+.card-img-top.jogador3{
+  height: 500px;
+}
+.card-img-top.jogador4{
+  height: 400px;
 }
 }
