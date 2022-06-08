@@ -96,16 +96,20 @@
 }
 .jogador1{
   object-fit: cover;
+  height: 200px;
+  
 }
 .jogador2{
   object-fit: cover;
-
+  height: 200px;
 }
 .jogador3{
   object-fit: cover;
+  height: 200px;
 }
 .jogador4{
   object-fit: cover;
+  height: 200px;
 }
 .botoesLista{
   display: flex;
@@ -136,7 +140,7 @@
 
   display: flex;
   margin-right: 20px;
-  margin-left: 20px;
+  margin-left: -20px;
 }
 }
 @media screen and (max-width: 550px){ 
