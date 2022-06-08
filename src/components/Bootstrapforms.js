@@ -90,14 +90,10 @@ export default function () {
   }
 
   const cancelar = () => {
-
-    document.getElementById('formGridCity').value = null
-    document.getElementById('formGridState').value = null
-    document.getElementById('formGridAddress1').value = null
-    document.getElementById('formGridEmail').value = null
-    document.getElementById('formGridPassword').value = null
-    document.getElementById('formGridAddress2').value = null
-    document.getElementById('formGridAddress2').disabled = false
+    if(atividade !== null){
+      window.location.reload()
+    }
+    
   }
 
 
@@ -123,12 +119,12 @@ export default function () {
     const atividade = atividades.filter((atividade) => atividade.id === id);
     setAtividade(atividade[0])
 
-    document.getElementById('formGridCity').value = atividade[0].cidade;
-    document.getElementById('formGridEmail').value = atividade[0].email;
-    document.getElementById('formGridState').value = atividade[0].estado;
-    document.getElementById('formGridAddress1').value = atividade[0].rua;
-    document.getElementById('formGridPassword').value = atividade[0].password;
-    document.getElementById('formGridAddress2').value = atividade[0].name;
+      document.getElementById('formGridCity').value = atividade[0].cidade;
+      document.getElementById('formGridEmail').value = atividade[0].email;
+      document.getElementById('formGridState').value = atividade[0].estado;
+      document.getElementById('formGridAddress1').value = atividade[0].rua;
+      document.getElementById('formGridPassword').value = atividade[0].password;
+      document.getElementById('formGridAddress2').value = atividade[0].name;
 
   }
 
