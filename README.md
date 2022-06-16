@@ -1,4 +1,4 @@
-<h1>AV2 - Sistema Web Backend</h1>
+<h1>AV2 - Sistema Web Frontend</h1>
 
 > Desenvolvemos sistema Web Backend:
   + API CRUD (Create, Retrieve, Udpate Delete) usamos metodos HTTP e respostas HTTP da forma correta.
@@ -30,12 +30,14 @@
   <tr>
     <td>React</td>
     <td>Bootstrap</td>
-    <td>Node</td>      
+    <td>Node</td> 
+    <td>Mongoose</td>
   </tr>
   <tr>
     <td>v17.0.2</td>
     <td>v5.2</td>
-    <td>v8</td>       
+    <td>v8</td>
+    <td>v6.3.8</td>
    </tr> 
 <table/>
 
