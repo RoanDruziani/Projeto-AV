@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Form } from "react-bootstrap"
 import { Row } from "react-bootstrap"
 import { Col } from "react-bootstrap"
@@ -13,6 +13,7 @@ export default function () {
   const [estado, setEstado] = useState()
   const [atividades, setAtividades] = useState([]);
   const [atividade, setAtividade] = useState(null);
+
 
   const preencherFormulario = (endereco) => {
     document.getElementById('formGridCity').value = endereco.localidade
@@ -194,7 +195,19 @@ export default function () {
         <Bootstrapbutton text={atividade !== null ? "Atualizar" : "Salvar"} type="submit" onClick={enviar} />
         <Bootstrapbutton text="Cancelar" type="submit" onClick={cancelar} />
       </div>
+
       <div>
+        <input
+          type='text'
+          onChange={(e) => {
+
+            if (e.target.value == "") {
+
+              getPersons()
+              
+            } else { setAtividades(atividades.filter(x => x.name.includes(e.target.value))) }
+          }}
+        />
         <AtividadeLista
           atividades={atividades}
           deletarAtividade={deletarAtividade}
@@ -202,5 +215,6 @@ export default function () {
         />
       </div>
     </div>
+
   )
 }
