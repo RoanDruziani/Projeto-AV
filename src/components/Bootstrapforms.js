@@ -205,7 +205,7 @@ export default function () {
 
               getPersons()
               
-            } else { setAtividades(atividades.filter(x => x.name.includes(e.target.value))) }
+            } else { setAtividades(atividades.filter(x => x.name.toLowerCase().includes(e.target.value.toLowerCase()))) }
           }}
         />
         <AtividadeLista
