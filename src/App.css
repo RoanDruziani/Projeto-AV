@@ -95,7 +95,7 @@
   color:yellow!important;
 }
 .jogador1{
-  object-fit: cover;
+  object-fit: fill;
   height: 200px;
 }
 .jogador2{

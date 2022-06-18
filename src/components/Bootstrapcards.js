@@ -5,7 +5,7 @@ export default function Bootstrapcards() {
   return (
     <div className='c6'>
       <Card style={{ width: '20rem'}}>
-  <Card.Img className='jogador1'  variant="top" src="https://conteudo.imguol.com.br/c/esporte/fc/2022/02/10/paulinho-comemora-um-dos-gols-do-corinthians-contra-o-mirassol-pelo-paulistao-1644542023853_v2_3x4.jpg" />
+  <Card.Img  className='jogador1'  variant="top" src="https://conteudo.imguol.com.br/c/esporte/fc/2022/02/10/paulinho-comemora-um-dos-gols-do-corinthians-contra-o-mirassol-pelo-paulistao-1644542023853_v2_3x4.jpg" />
   <Card.Body> 
     <Card.Title>Paulinho</Card.Title>
     <Card.Text>
