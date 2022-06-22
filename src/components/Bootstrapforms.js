@@ -192,13 +192,15 @@ export default function () {
         </Form.Group>
       </Form>
       <div className='botoesLista'>
-        <Bootstrapbutton text={atividade !== null ? "Atualizar" : "Salvar"} type="submit" onClick={enviar} />
-        <Bootstrapbutton text="Cancelar" type="submit" onClick={cancelar} />
+        <Bootstrapbutton className='botaoSalvar' text={atividade !== null ? "Atualizar" : "Salvar"} type="submit" onClick={enviar} />
+        <Bootstrapbutton className='botaoCancelar' text="Cancelar" type="submit" onClick={cancelar} />
       </div>
 
-      <div>
+      <div className='form-group'>
         <br></br>
-        <input
+        <h5>Buscar Sócio</h5>
+        <input className='filtro'
+          placeholder='Buscar cadastro Sócio Torcedor : . . .'
           type='text'
           onChange={(e) => {
 

@@ -116,6 +116,15 @@
     align-items: center;
     justify-content: space-evenly;
 }
+.filtro{
+  width: 300px;
+  align-items: flex-end;
+}
+.botaoSalvar{
+  background-color: #000;
+  border-color: #000;
+  width: 200px;
+}
 
 .mb-3{
   width: 100%;
@@ -177,10 +186,5 @@
 .card-img-top.jogador4{
   height: 400px;
 }
-.botoesLista{
-  display: flex;
-  justify-content: center;
-  margin-inline: 2px;
-  width: 100%;
-}
+
 }
