@@ -91,9 +91,14 @@ export default function () {
   }
 
   const cancelar = () => {
-    if (atividade !== null) {
-      window.location.reload()
-    }
+    setAtividade(null)
+
+    document.getElementById('formGridCity').value = ""
+    document.getElementById('formGridEmail').value = ""
+    document.getElementById('formGridState').value = ""
+    document.getElementById('formGridAddress1').value = ""
+    document.getElementById('formGridPassword').value = ""
+    document.getElementById('formGridAddress2').value = ""
 
   }
 
